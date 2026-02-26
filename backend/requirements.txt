@@ -6,14 +6,9 @@ boto3
 botocore
 
 # MedASR - Google Medical Speech Recognition
-# Requires accepting license at: https://huggingface.co/google/medasr
-# transformers>=5.0.0
-# torch>=2.0.0
 librosa
 soundfile
 
-# Alternative: OpenAI Whisper (fallback, less accurate for medical)
-# openai-whisper
 
 # ML deps — only needed when DEMO_MODE=false (real model inference)
 torch>=2.3.0
