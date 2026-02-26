@@ -30,9 +30,9 @@ Please note that this repository is currently configured as a **UI and Concept D
 To run real inferences instead of the UI simulation, you will need access to the base MedGemma models and our custom LoRA adapters:
 - **Base Text Model**: [google/medgemma-27b-text-it](https://huggingface.co/google/medgemma-27b)
 - **Base Multimodal Model**: [google/medgemma-4b-it](https://huggingface.co/google/medgemma-4b)
-- **Phase 1B Adapter**: *(Contact repository owner for adapter weights)*
-- **Phase 2 Adapter**: *(Contact repository owner for adapter weights)*
-- **Oncology Surveillance Adapter**: *(Contact repository owner for adapter weights)*
+- **Phase 1B Adapter**: [bobby07007/surgicalcopilot-phase1b-27b](https://huggingface.co/bobby07007/surgicalcopilot-phase1b-27b)
+- **Phase 2 Adapter**: [bobby07007/surgicalcopilot-phase2-27b](https://huggingface.co/bobby07007/surgicalcopilot-phase2-27b)
+- **Oncology Surveillance Adapter**: [bobby07007/surgicalcopilot-onco-27b](https://huggingface.co/bobby07007/surgicalcopilot-onco-27b)
 ## 📸 Live Inference Evidence (Real Runs)
 
 These are screenshots from real inference runs in the deployed Surgical Copilot web app.
@@ -124,9 +124,14 @@ npm run dev
 ```bash
 # Backend
 cd backend
-export DEMO_MODE=false
-export HF_TOKEN=your_token_here
-python app/main.py
+
+# Launch with MedGemma Base Model + Phase 1B/Phase 2/Onco LoRAs
+DEMO_MODE=false \
+HF_TOKEN="hf_YOUR_TOKEN_HERE" \
+ADAPTER_PHASE1B_PATH="bobby07007/surgicalcopilot-phase1b-27b" \
+ADAPTER_PHASE2_PATH="bobby07007/surgicalcopilot-phase2-27b" \
+ADAPTER_ONCO_PATH="bobby07007/surgicalcopilot-onco-27b" \
+python -m uvicorn app.main:app --host 0.0.0.0 --port 8000
 
 # Frontend (new terminal)
 cd frontend
