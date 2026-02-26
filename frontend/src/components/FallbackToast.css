@@ -1,0 +1,102 @@
+/* ── FallbackToast ─────────────────────────────────────────────── */
+.fallback-toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 420px;
+    pointer-events: none;
+}
+
+.fallback-toast {
+    pointer-events: auto;
+    background: rgba(30, 30, 46, 0.95);
+    backdrop-filter: blur(16px);
+    border-radius: 12px;
+    padding: 14px 18px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    border-left: 4px solid #6366f1;
+    animation: toast-slide-in 0.35s ease-out;
+    color: #e2e8f0;
+    font-size: 0.88rem;
+    line-height: 1.45;
+}
+
+.fallback-toast--warning {
+    border-left-color: #f59e0b;
+}
+
+.fallback-toast--error {
+    border-left-color: #ef4444;
+}
+
+.fallback-toast--info {
+    border-left-color: #6366f1;
+}
+
+.fallback-toast__header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.fallback-toast__icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.fallback-toast__title {
+    flex: 1;
+    font-weight: 600;
+    color: #f1f5f9;
+}
+
+.fallback-toast__close {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 0 2px;
+    line-height: 1;
+    transition: color 0.15s;
+}
+
+.fallback-toast__close:hover {
+    color: #f1f5f9;
+}
+
+.fallback-toast__message {
+    margin: 6px 0 0 28px;
+    color: #cbd5e1;
+    font-size: 0.82rem;
+}
+
+.fallback-toast__rid {
+    margin: 4px 0 0 28px;
+    color: #64748b;
+    font-size: 0.75rem;
+}
+
+.fallback-toast__rid code {
+    background: rgba(100, 116, 139, 0.2);
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.72rem;
+}
+
+@keyframes toast-slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(60px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}

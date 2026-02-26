@@ -1,0 +1,35 @@
+{
+  "doc_type": "onco_surveillance",
+  "progression_status": "partial_response",
+  "recist_alignment": "PR",
+  "confidence": 0.81,
+  "risk_score": 0.47,
+  "urgency": "soon",
+  "cea_assessment": "rising",
+  "imaging_assessment": "new_peritoneal_deposit_query",
+  "trigger_reason": [
+    "cea_rising_3_consecutive",
+    "patient_fatigue_reported",
+    "query_peritoneal_deposit_ct"
+  ],
+  "send_to_oncologist": true,
+  "clinical_rationale": "62F, 18 months post sigmoid colectomy for adenocarcinoma Stage IIB. 3-month surveillance showing CEA rising over 3 consecutive measurements (2.1 → 4.8 → 9.3 ng/mL). CT abdomen/pelvis — one sub-centimetre peritoneal deposit of uncertain significance in the pouch of Douglas. ECOG 1 (mild fatigue). Not meeting RECIST progression criteria on current scan, but the CEA trajectory and new finding are concerning. Oncology MDT discussion recommended within 2 weeks.",
+  "recommended_actions": [
+    "Urgent oncology MDT review — suspicious peritoneal deposit + rising CEA",
+    "Repeat CT chest/abdomen/pelvis in 6 weeks (not 6 months)",
+    "Consider PET-CT to characterise peritoneal deposit",
+    "Next CEA in 4 weeks",
+    "Colonoscopy at 1 year (already scheduled)"
+  ],
+  "follow_up_months": 1.5,
+  "copilot_transfer": {
+    "send_to_oncologist": true,
+    "urgency": "soon",
+    "sbar": {
+      "situation": "AMBER: 62F — 18 months post sigmoid colectomy for Stage IIB colon adenocarcinoma. CEA rising over 3 consecutive readings; query peritoneal deposit on CT. Oncology MDT review recommended within 2 weeks.",
+      "background": "62-year-old female underwent laparoscopic sigmoid colectomy Jan 2024 for pT3N0M0 adenocarcinoma (Stage IIB). No adjuvant chemotherapy (MSI-H tumour). Serial surveillance per NCCN guidelines. Previous 3 CEA values: 2.1 (Aug), 4.8 (Nov), 9.3 (Feb). CT report notes 8mm soft tissue deposit in pouch of Douglas — 'uncertain, NCRM'. ECOG 1.",
+      "assessment": "Rising CEA over 3 measurements (doubling time ~90 days) is a recognised early indicator of recurrence (sensitivity 79%, specificity 70% at this threshold). The sub-centimetre peritoneal deposit, while not definitively RECIST progression, adds clinical concern. Patient reports new fatigue (ECOG upgraded 0→1). No other localising symptoms.",
+      "recommendation": "Convene oncology MDT within 2 weeks to review imaging and biomarkers. Arrange PET-CT to characterise peritoneal focus. Repeat CEA in 4 weeks. Repeat CT in 6 weeks if PET equivocal. Patient counselled on findings and given dedicated oncology nurse contact. Ensure colonoscopy (1-year) is confirmed."
+    }
+  }
+}

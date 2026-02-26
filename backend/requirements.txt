@@ -1,0 +1,25 @@
+fastapi>=0.115.0
+uvicorn[standard]>=0.34.0
+python-dotenv>=1.1.0
+python-multipart>=0.0.9
+boto3
+botocore
+
+# MedASR - Google Medical Speech Recognition
+# Requires accepting license at: https://huggingface.co/google/medasr
+# transformers>=5.0.0
+# torch>=2.0.0
+librosa
+soundfile
+
+# Alternative: OpenAI Whisper (fallback, less accurate for medical)
+# openai-whisper
+
+# ML deps — only needed when DEMO_MODE=false (real model inference)
+torch>=2.3.0
+transformers>=4.47.0,<5.2.0
+peft>=0.14.0
+accelerate>=0.34.0
+sentencepiece
+bitsandbytes
+pillow

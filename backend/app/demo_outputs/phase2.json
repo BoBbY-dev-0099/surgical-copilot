@@ -1,0 +1,43 @@
+{
+  "doc_type": "daily_triage",
+  "risk_level": "amber",
+  "risk_score": 0.54,
+  "trajectory": "stable",
+  "red_flag_triggered": true,
+  "trigger_reason": [
+    "low_grade_fever",
+    "wound_redness",
+    "reduced_mobility"
+  ],
+  "domain_flags": {
+    "pain": "elevated_3_10",
+    "fever": "low_grade_38.1",
+    "wound": "erythema_present",
+    "bowel": "normal",
+    "mobility": "reduced_short_distances"
+  },
+  "timeline_deviation": "mild",
+  "clinical_rationale": "58M POD4 post sigmoid resection for Hinchey II diverticulitis. Reports low-grade fever (38.1°C at home), wound redness at port site, and reduced mobility compared to yesterday. Pain 3/10 at wound site. Bowel function has returned (passing flatus). All other parameters within expected range for POD4. Mild deviation from expected trajectory — warrants increased vigilance and GP review within 24 hours to rule out superficial wound infection.",
+  "patient_message": "Thank you for completing your check-in. Your recovery is mostly on track, but we've noticed a low-grade temperature and some redness around your wound site that need attention. Please call your GP or our nurse helpline today to arrange a wound check. If your temperature rises above 38.5°C, you develop severe pain, or your wound starts to weep, please go to your nearest Emergency Department immediately.",
+  "next_checkin_hours": 12,
+  "send_to_clinician": true,
+  "copilot_transfer": {
+    "send_to_clinician": true,
+    "urgency": "soon",
+    "sbar": {
+      "situation": "AMBER: 58M POD4 post sigmoid resection — low-grade fever, wound erythema, reduced mobility. Risk score 0.54. Copilot recommends clinical review within 24 hours.",
+      "background": "58-year-old male underwent laparoscopic sigmoid resection for Hinchey II diverticulitis. Discharged POD2 with written wound care instructions. Check-in via app POD4. No documented allergies.",
+      "assessment": "Self-reported Temp 38.1°C, Pain 3/10, wound erythema at left port site (no discharge reported). Bowel function returned — passing flatus. Mobility reduced to <100m. No signs of anastomotic leak (no peritonism, no PR bleeding reported). Risk score 0.54 (AMBER threshold).",
+      "recommendation": "Telephone review by surgical nurse today. Arrange wound check — consider community nurse or GP same-day. Advise patient to take paracetamol, continue wound care, and return immediately if temperature >38.5°C, wound discharge, severe abdominal pain, or inability to eat. Follow-up clinic appointment maintained at 2 weeks."
+    }
+  },
+  "phase1b_compat": {
+    "label_class": "watch_wait",
+    "trajectory": "stable",
+    "red_flag_triggered": true,
+    "red_flags": [
+      "low_grade_fever",
+      "wound_erythema"
+    ]
+  }
+}

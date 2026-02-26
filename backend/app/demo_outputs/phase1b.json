@@ -1,0 +1,47 @@
+{
+  "label_class": "operate_now",
+  "trajectory": "deteriorating",
+  "red_flag_triggered": true,
+  "red_flags": [
+    "fever_high",
+    "tachycardia",
+    "elevated_wbc",
+    "wound_erythema"
+  ],
+  "confidence": 0.91,
+  "clinical_rationale": "67F POD2 post robotic partial nephrectomy presenting with fever (38.9°C), sustained tachycardia (HR 112), rising WBC (18.2 × 10⁹/L), and progressive wound erythema. Clinical trajectory is deteriorating. NEWS2 score 7 — emergency escalation threshold. Pattern consistent with early post-operative infection / haematoma formation. Recommend urgent senior surgical review and cross-sectional imaging.",
+  "news2": {
+    "news2_score": 7,
+    "news2_risk_band": "high",
+    "news2_clinical_response": "Emergency response — continuous monitoring, urgent senior clinical review",
+    "news2_parameters_available": 5
+  },
+  "watch_parameters": [
+    "temperature",
+    "wbc",
+    "heart_rate",
+    "wound_site",
+    "urine_output"
+  ],
+  "reassess_in_hours": 2,
+  "sepsis_screen": {
+    "qsofa_score": 2,
+    "qsofa_criteria_met": [
+      "RR 24 ≥22/min",
+      "SBP 98 ≤100 mmHg"
+    ],
+    "sepsis_likelihood": "high",
+    "sepsis_action": "Activate sepsis protocol. Blood cultures, lactate, broad-spectrum antibiotics within 1 hour. Assess for source control.",
+    "surviving_sepsis_aligned": true
+  },
+  "copilot_transfer": {
+    "send_to_clinician": true,
+    "urgency": "urgent",
+    "sbar": {
+      "situation": "URGENT: 67F POD2 post robotic partial nephrectomy — clinical deterioration with fever, tachycardia, rising WBC. NEWS2 = 7. Copilot recommends immediate escalation.",
+      "background": "67-year-old female underwent robotic-assisted partial right nephrectomy for a 3.2 cm renal mass. PMH: HTN, Type 2 DM. Discharged to ward POD1. Now POD2 with worsening clinical picture over past 6 hours.",
+      "assessment": "Temp 38.9°C, HR 112 bpm, BP 98/64 mmHg, RR 24/min, SpO2 96% on 2L NC. WBC 18.2, CRP 142. Wound site shows erythema and induration. Lactate 2.4 mmol/L. qSOFA 2 — high sepsis likelihood. CT abdomen/pelvis being arranged.",
+      "recommendation": "Review patient at bedside urgently. Consider CT imaging, blood cultures × 2, urine C&S, IV antibiotics per local protocol. Escalate to ICU if haemodynamics do not improve within 1 hour. Patient has been made NBM in anticipation of possible return to theatre."
+    }
+  }
+}
