@@ -1,4 +1,8 @@
 # Surgical Copilot - An AI copilot that watches over surgical patients from hospital bed to home recovery
+> [!WARNING]
+> **Live Demo URL Update:** The original Azure URL submitted (`https://surgicalcopilot-app.azurewebsites.net/`) is currently unavailable due to an unexpected Microsoft Azure account freeze. We have migrated the frontend to Vercel so the application can still be evaluated.
+
+**[🌐 Working Live Demo (Vercel)](https://surgical-copilot.vercel.app/)**
 
 A MedGemma-Powered Clinical Governance System for Surgical Decision Support.
 
