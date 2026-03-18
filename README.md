@@ -79,7 +79,7 @@ These are screenshots from real inference runs in the deployed Surgical Copilot 
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/surgical-copilot.git
+git clone https://github.com/BoBbY-dev-0099/surgical-copilot.git
 cd surgical-copilot
 ```
 
